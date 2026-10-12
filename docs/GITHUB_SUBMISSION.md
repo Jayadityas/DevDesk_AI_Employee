@@ -4,6 +4,8 @@ Edit the application in the original `C:\AI_employee` workspace. The generated s
 
 ## First push
 
+This workspace is now connected and its initial commit was pushed successfully to [Jayadityas/DevDesk_AI_Employee](https://github.com/Jayadityas/DevDesk_AI_Employee). The checkout is `var/github-submission`, branch main, upstream origin/main. Commit signing is disabled only for this checkout because the machine's configured signing key was unavailable. Do not repeat initial setup here. The steps below document setup for another workspace.
+
 1. Sign into your GitHub account and create a repository named `DevDesk`. Use Public if submission reviewers must open it without invitations, or Private with reviewer access. Leave README, .gitignore and licence initialization unchecked. Copy its HTTPS URL.
 2. Run the following in PowerShell. Replace name/email and repository URL with yours. Use the GitHub-provided noreply email if you prefer to keep your email out of commit metadata. Local config affects this submission only; global Git identity remains untouched.
 
@@ -26,6 +28,15 @@ Authenticate through Git's normal GitHub sign-in/credential manager when prompte
 After a successful push, the submission URL is `https://github.com/YOUR_USERNAME/DevDesk`. Check that README, devdesk source, docs and distribution files are visible and no local account/config/database files appear. A reviewer can clone this repo and follow SETUP_AND_DEMO; the bootstrap restores playground source/history from its bundle. This is source publication, separate from the future automated DevDesk PR/reviewer/admin connector.
 
 ## Future changes
+
+For this already configured workspace, the simplest update is:
+
+```powershell
+cd C:\AI_employee
+powershell -NoProfile -ExecutionPolicy Bypass -File .\tools\Push-GitHubChanges.ps1 -Message "Describe your changes"
+```
+
+This syncs the reviewed source package, stages it, commits it and pushes using the existing upstream. Git trust is limited to this exact generated directory for each command; global Git settings are not changed. It refuses to overwrite uncommitted edits in the generated checkout. Make source changes in the original workspace, not the generated copy. If another contributor changes the remote, a non-fast-forward push stops rather than force-overwriting their work.
 
 Make changes in the original workspace. If you changed the separate playground repository, commit those changes there first; the package exports Git history and refuses dirty fixture worktrees. Control-plane/tool/doc edits are copied directly from original source.
 

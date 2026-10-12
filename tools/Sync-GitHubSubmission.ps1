@@ -5,7 +5,7 @@ $target=[IO.Path]::GetFullPath((Join-Path $root 'var/github-submission'))
 $expected=[IO.Path]::GetFullPath((Join-Path $root 'var'))+[IO.Path]::DirectorySeparatorChar
 if(-not $target.StartsWith($expected,[StringComparison]::OrdinalIgnoreCase)){throw 'Submission target must stay inside workspace var.'}
 if(Test-Path (Join-Path $target '.git')){
- $changes=& git -C $target status --porcelain
+ $changes=& git -c "safe.directory=$target" -C $target status --porcelain
  if($LASTEXITCODE -ne 0){throw 'Submission Git status failed.'}
  if($changes){throw 'Submission checkout has uncommitted edits. Commit/reconcile them first; edit application source in the original workspace.'}
 }

@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-12T15:55:33.869Z",
+  "created_at": "2026-10-12T15:58:58.234Z",
   "files": [
     {
       "path": ".gitattributes",
@@ -283,7 +283,7 @@
     },
     {
       "path": "docs/GITHUB_SUBMISSION.md",
-      "sha256": "f9bc9e211f27e31ba60b99cb78b13624ffe442c0a8042c576b07fa67dd87194c"
+      "sha256": "2f57844455e1acbc85f38b3b231fd8207f19de6b51108b31793115044a80a685"
     },
     {
       "path": "docs/INTERVIEW_AND_DEBUGGING.md",
@@ -398,6 +398,10 @@
       "sha256": "bbc3c279a3c2a161edbd1057b1bfe8b8ed695845f1166f14b46878e90a5d3bce"
     },
     {
+      "path": "tools/Push-GitHubChanges.ps1",
+      "sha256": "3fdd44dda41b495af81ff98231ca2b2adeb4cc80ef7bb82424a4d81fff506aa6"
+    },
+    {
       "path": "tools/repair-helper.mjs",
       "sha256": "ad8666aadddc38d5862545db9221c116943816b4d9d7c0b20ba206ee272c9470"
     },
@@ -439,7 +443,7 @@
     },
     {
       "path": "tools/Sync-GitHubSubmission.ps1",
-      "sha256": "a2afb2ac7d95e6ae6803115395b5d8ba0767a52f33fb0c5211b9fc237d395295"
+      "sha256": "0fb7ec59f7dacdd842fb2dd210d00dde6862d8a4a0c8d2c68bc4c26e20362a1d"
     },
     {
       "path": "trusted_checks/phase1.mjs",

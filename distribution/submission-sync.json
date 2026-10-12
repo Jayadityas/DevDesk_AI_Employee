@@ -1,6 +1,7 @@
 ﻿{
     "source":  "original workspace; edit there then sync",
     "files":  [
+                  ".gitattributes",
                   ".gitignore",
                   "ARCHITECTURE.md",
                   "BUILD_STATUS.md",
@@ -99,6 +100,7 @@
                   "tools/package-lock.json",
                   "tools/package.json",
                   "tools/preview-helper.mjs",
+                  "tools/Push-GitHubChanges.ps1",
                   "tools/repair-helper.mjs",
                   "tools/repair-profile.mjs",
                   "tools/Restore-PackagedFixtures.ps1",
