@@ -2,6 +2,8 @@
 
 A local C++ employee workbench that investigates controlled bug reports, obtains source permission, generates and checks a candidate, waits for requester acceptance, and verifies integration before completion. Features additionally require a fixed-roster two-thirds vote. Real Gemini candidates fixed mobile button overlap, backend status filtering and the missing Completed filter.
 
+**Demo video:** [Watch DevDesk on Loom](https://www.loom.com/share/398ea7183b0b483f863caeb1ef3ba4fb).
+
 Current implementation supports those three registered capabilities, local Git integration, in-app notifications and foreground workers. GitHub PR/reporter/admin integration remains planned. This is a Windows development/demo workspace, not a hosted production service.
 
 ## Start on the configured machine
@@ -68,7 +70,7 @@ Phase9 validates historical evidence and runs current regression/startup checks 
 
 ## Learning and submission material
 
-The [submission overview](docs/SUBMISSION_OVERVIEW.md) maps architecture, design decisions, assumptions, limitations, next steps and model/component disclosures to the requested submission items. Follow the [live Loom workflow](docs/LIVE_LOOM_WORKFLOW.md) to record a new bug submission, AI repair, both approvals, and a new feature with three consensus votes. The [completed-history presentation](docs/LOOM_RECORDING_SCRIPT.md) is an alternative walkthrough of existing evidence. The video link will be added here after the recording is shared.
+The [submission overview](docs/SUBMISSION_OVERVIEW.md) maps architecture, design decisions, assumptions, limitations, next steps and model/component disclosures to the requested submission items. Follow the [live Loom workflow](docs/LIVE_LOOM_WORKFLOW.md) to record a new bug submission, AI repair, both approvals, and a new feature with three consensus votes. The [completed-history presentation](docs/LOOM_RECORDING_SCRIPT.md) is an alternative walkthrough of existing evidence. [Watch the submitted demo on Loom](https://www.loom.com/share/398ea7183b0b483f863caeb1ef3ba4fb).
 
 - [Setup, troubleshooting and five-minute recording plan](docs/SETUP_AND_DEMO.md)
 - [Critical scenario matrix](docs/VERIFICATION_MATRIX.md)
@@ -77,4 +79,4 @@ The [submission overview](docs/SUBMISSION_OVERVIEW.md) maps architecture, design
 - [Backend guide](docs/PHASE7_BACKEND_GUIDE.md), [feature guide](docs/PHASE8_FEATURE_GUIDE.md)
 - [Learning log](LEARNING_LOG.md), [specification/future GitHub flow](SPEC.md)
 
-Earlier README content is retained in [historical notes](docs/README_HISTORY.md); current setup above supersedes old native-fixture launch instructions. No video was recorded/uploaded. Review the interview exercises and explain one recorded repair, each permission boundary and a failure/recovery case at the final learning checkpoint.
+Earlier README content is retained in [historical notes](docs/README_HISTORY.md); current setup above supersedes old native-fixture launch instructions. Review the interview exercises and explain one recorded repair, each permission boundary and a failure/recovery case at the final learning checkpoint.

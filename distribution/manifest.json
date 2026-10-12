@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-12T17:25:39.962Z",
+  "created_at": "2026-10-12T18:26:28.131Z",
   "files": [
     {
       "path": ".gitattributes",
@@ -343,7 +343,7 @@
     },
     {
       "path": "docs/SUBMISSION_OVERVIEW.md",
-      "sha256": "bad259c246702fddcac8a4dfe27c734cde2f124df25a0305a92efa878b3a96a6"
+      "sha256": "b323466561d6d1cafbdcbb3cd9323095a839947549bb25bc798fddb8c4cd4168"
     },
     {
       "path": "docs/verification-index.json",
@@ -359,7 +359,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "13b6d7958fcc2dd0d84959495faebbb773a731c78bda945a4cb07f243b06eb55"
+      "sha256": "50238aca06cbb21d3f7a6b0f8bea21ed1ccb4fe5ab6513edabe5f4e36ce2e3a9"
     },
     {
       "path": "SPEC.md",

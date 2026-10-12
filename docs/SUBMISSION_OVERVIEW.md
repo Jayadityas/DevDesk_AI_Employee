@@ -1,6 +1,6 @@
 # Submission overview
 
-Source: https://github.com/Jayadityas/DevDesk_AI_Employee. Setup/run instructions are in README and SETUP_AND_DEMO. The Loom video link will be added after recording; no recording is claimed yet.
+Source: https://github.com/Jayadityas/DevDesk_AI_Employee. Setup/run instructions are in README and SETUP_AND_DEMO. Demo video: [Watch DevDesk on Loom](https://www.loom.com/share/398ea7183b0b483f863caeb1ef3ba4fb).
 
 Architecture: authenticated DevDesk C++ control plane stores workflow in PostgreSQL; a separate C++/SQLite Team Tasks app supplies controlled repair targets; a bounded model worker uses fixed tools and a protected Docker evaluator. Source changes happen in task worktrees. Scope approval precedes edits; exact candidate acceptance precedes local integration; integrated PASS evidence gates COMPLETED. Features also require a fixed-roster two-thirds vote.
 
