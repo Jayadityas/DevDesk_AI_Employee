@@ -13,15 +13,17 @@ if(Test-Path (Join-Path $target '.git')){
 if($LASTEXITCODE -ne 0){throw 'Source package failed; submission was not updated.'}
 $package=Get-Content (Join-Path $root 'var/packages/latest.json') -Raw | ConvertFrom-Json
 $manifest=Get-Content (Join-Path $package.directory 'distribution/manifest.json') -Raw | ConvertFrom-Json
-$names=@($manifest.files.path)+@('distribution/manifest.json','distribution/submission-sync.json')
+$names=@($manifest.files.path)+@('distribution/manifest.json')
 $marker=Join-Path $target 'distribution/submission-sync.json'
+$privateRemoved=@()
 if(Test-Path -LiteralPath $marker){
  $old=Get-Content -LiteralPath $marker -Raw | ConvertFrom-Json
  foreach($relative in $old.files){
   if($names -contains $relative){continue}
   $file=[IO.Path]::GetFullPath((Join-Path $target $relative))
   if(-not $file.StartsWith(($target+[IO.Path]::DirectorySeparatorChar),[StringComparison]::OrdinalIgnoreCase) -or $relative -match '(^|/)\.git(/|$)'){throw 'Invalid previously generated file path.'}
-  if(Test-Path -LiteralPath $file -PathType Leaf){Remove-Item -LiteralPath $file}
+  # Removed generated files remain locally available; untrack them after copying .gitignore.
+  $privateRemoved+=@($relative)
  }
 }
 New-Item -ItemType Directory -Force -Path $target | Out-Null
@@ -30,6 +32,16 @@ foreach($relative in @($manifest.files.path)+@('distribution/manifest.json')){
  if(-not $destination.StartsWith(($target+[IO.Path]::DirectorySeparatorChar),[StringComparison]::OrdinalIgnoreCase) -or $relative -match '(^|/)\.git(/|$)'){throw 'Invalid package file path.'}
  New-Item -ItemType Directory -Force -Path (Split-Path $destination) | Out-Null
  Copy-Item -LiteralPath (Join-Path $package.directory $relative) -Destination $destination -Force
+}
+foreach($relative in $privateRemoved){
+ & git -c "safe.directory=$target" -C $target check-ignore --no-index --quiet -- $relative
+ if($LASTEXITCODE -ne 0){throw "Removed publication file needs an ignore rule before untracking: $relative"}
+ $tracked=& git -c "safe.directory=$target" -C $target ls-files -- $relative
+ if($LASTEXITCODE -ne 0){throw 'Could not inspect removed publication file.'}
+ if($tracked){
+  & git -c "safe.directory=$target" -C $target rm --cached -- $relative
+  if($LASTEXITCODE -ne 0){throw 'Could not untrack private local file.'}
+ }
 }
 @{files=$names;source='original workspace; edit there then sync'} | ConvertTo-Json -Depth 3 | Set-Content -LiteralPath $marker -Encoding UTF8
 Write-Host "Submission synchronized: $target"

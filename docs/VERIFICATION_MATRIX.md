@@ -4,7 +4,7 @@ The machine-readable index is verification-index.json. Its reports are historica
 
 | Critical behavior | Evidence | Practical limit |
 | --- | --- | --- |
-| Screenshot report independently observed | frontend-live, Phase3 guide | Actual controlled browser observation; not a general image reasoning benchmark. |
+| Screenshot report independently observed | frontend-live | Actual controlled browser observation; not a general image reasoning benchmark. |
 | Mobile overlap fixed without hiding controls | frontend-live + frontend-runtime |20 browser/API assertions, actual unforced interactions. |
 | Backend output independently verified | backend-live + backend-runtime |26 assertions; trusted SQLite reader, dynamic mutations. |
 | No edit without reporter approval; other user denied | frontend-authorization, backend-authorization | Authenticated real API with explicit scripted decisions. |
@@ -19,6 +19,6 @@ The machine-readable index is verification-index.json. Its reports are historica
 | Rejected consensus in INVALID history/notified | feature-consensus | In-app notification and retained evidence. |
 | Source/content cannot expand permissions | authorization suites + feature-consensus | Tested scope/typed action/file boundaries; no universal adversarial-content benchmark. |
 | Evaluator protected; execution bounded | three runtime reports | Real mount/capability/timeout checks; backend UID/report/process canaries. |
-| Budget/unsupported conclusion stops truthfully | Phase3/4/7 retained failures and phase guides | Unknown billed usage remains unknown; no live exhaustion of every budget axis claimed. |
+| Budget/unsupported conclusion stops truthfully | Protected policy checks and retained local failures | Unknown billed usage remains unknown; no live exhaustion of every budget axis claimed. |
 
-Demonstrated application cases: one frontend defect, one backend defect and one feature, each with a real Gemini candidate and verified local integration. Numerous earlier failed attempts are retained; three eventual completions are not a reliability success rate. Current healthy check sets contain20 frontend,26 backend and22 feature assertions. Details, models, costs, failed attempts and varying build versions are recorded in BUILD_STATUS and the phase guides.
+Demonstrated application cases: one frontend defect, one backend defect and one feature, each with a real Gemini candidate and verified local integration. Numerous earlier failed attempts are retained locally; three eventual completions are not a reliability success rate. Current healthy check sets contain20 frontend,26 backend and22 feature assertions. Models, costs and practical limits are documented in [disclosures](DISCLOSURES_AND_LIMITS.md). Selected assertion extracts are available in [distribution/evidence](../distribution/evidence); the index's original report paths refer to private historical runtime evidence.

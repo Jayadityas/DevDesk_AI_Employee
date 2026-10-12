@@ -1,21 +1,16 @@
-# Setup and a short demonstration
+# Setup and run
 
-The current workspace is already configured. For normal use, keep Docker running and start these in two PowerShell terminals from `C:\AI_employee`:
+Source: [GitHub repository](https://github.com/Jayadityas/DevDesk_AI_Employee). Demo: [Loom video](https://www.loom.com/share/398ea7183b0b483f863caeb1ef3ba4fb).
 
-```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File .\tools\Start-Workbench.ps1
-powershell -NoProfile -ExecutionPolicy Bypass -File .\tools\Start-Workers.ps1
-```
+## Prerequisites
 
-Workbench is http://127.0.0.1:8094. Previews are frontend8081, backend8082 and feature8083. Open `var/config/demo-accounts.json` locally for synthetic account credentials. Workers poll only while their terminal stays open; restart old terminals after a new build. Docker application builds/runs remain isolated. Main-workbench manual reports retain their existing states.
+This implementation was tested on Windows with PowerShell, Git, Node24, installed Chrome, MSYS2 UCRT64 GCC16.2 and SQLite development files, PostgreSQL17 binaries/headers/libraries, and Docker Desktop's Linux engine. Build scripts use C:\msys64\ucrt64\bin\g++.exe and C:\Program Files\PostgreSQL\17; adjust trusted installation paths if necessary. Linux/macOS control-plane portability and a separate-machine clean installation are unverified.
 
-## Source package on a prepared Windows machine
+The source includes vendored cpp-httplib/json headers and licences, a Playwright lockfile, playground history and assertion-only verification extracts. It excludes runtime credentials, accounts, databases, uploads, node_modules, compiled releases and Docker images.
 
-The source archive contains control-plane source, fixed tooling, docs/licenses, selected assertion reports and a Git bundle for the clean playground plus the three accepted fixture histories. It deliberately has no keys, local accounts, databases, uploads, node_modules, native releases or Docker image. The source is also published at https://github.com/Jayadityas/DevDesk_AI_Employee. The accessible Loom video link will be added once recording is finished.
+## Fresh prepared workspace
 
-Prerequisites observed in this implementation: Windows PowerShell, Git, Node24, Chrome, MSYS2 UCRT64 g++16.2 with SQLite headers/library, PostgreSQL17 binaries/headers/library at `C:\Program Files\PostgreSQL\17`, and a working Linux Docker engine. Compiler path is `C:\msys64\ucrt64\bin\g++.exe`. Exact observed libraries: cpp-httplib0.60.1, nlohmann/json3.12.0, Playwright1.64.0 (lockfile). Adjust installation paths in trusted build/setup scripts if needed. Linux/macOS control-plane portability is untested.
-
-Extract into a writable local directory. For a fresh prepared machine:
+Clone/extract into a writable directory and run these from its root:
 
 ```powershell
 powershell -NoProfile -ExecutionPolicy Bypass -File .\tools\Restore-PackagedFixtures.ps1
@@ -25,9 +20,9 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\tools\Build-Workbench.ps1
 powershell -NoProfile -ExecutionPolicy Bypass -File .\tools\Configure-Model.ps1
 ```
 
-Enter your Gemini key only in the newly created local `var/config/model.json`. The default provider/model is gemini / gemini-3.5-flash-lite. Never paste the key in chat, a report, a commit or recording. Generated PostgreSQL credentials stay in local ignored files. Setup uses dedicated localhost5433 and preserves existing data; it does not configure the unrelated5432 server. If another DevDesk installation already owns5433, do not run a second setup with unrelated credentials against it: use the existing configured workspace or a separate machine/VM. Package bootstrap verification does not provision a second database cluster on this machine.
+Enter your Gemini key only in local var/config/model.json. Default provider/model is gemini / gemini-3.5-flash-lite. Local passwords and bootstrap credentials are generated, not supplied in the repository. Setup uses dedicated port5433 and preserves existing data. If another DevDesk installation owns5433, use that configured workspace or a separate machine/VM; do not initialize unrelated credentials against its cluster.
 
-Build and verify the runner sequentially, then start Workbench/workers:
+Build and verify the runner sequentially:
 
 ```powershell
 powershell -NoProfile -ExecutionPolicy Bypass -File .\tools\Build-RepairRunner.ps1
@@ -36,35 +31,37 @@ node .\trusted_checks\verify-runner.mjs backend
 node .\trusted_checks\verify-runner.mjs feature
 ```
 
-Default restore selects the already accepted source, so healthy assertions are20/26/22. The first Docker build needs package/registry access. On the existing machine, `-UseVerifiedBase` can reuse its verified local image. This does not make the archive an offline dependency installer. A clean dependency installation, new-cluster initialization and fresh external image pull have not been demonstrated on a separate machine; Git restoration and the current configured startup were tested locally.
+Default restoration selects already accepted sources, so healthy application check sets contain20/26/22 assertions. The Docker build needs registry/package access. An existing configured machine can use Build-RepairRunner -UseVerifiedBase to reuse its verified image. This source distribution is not an offline dependency installer.
 
-To reproduce original defects on a separate prepared workspace, choose `Restore-PackagedFixtures.ps1 -Baseline` before any fixtures exist. It restores original defect commits from the same bundle, without inserting repairs. Run the three `verify-runner.mjs` commands above with `--baseline`; they validate the expected deliberate failures before workers execute edits. Restoration always preserves existing fixtures; it never resets accepted shared source. Do not host-build/run accepted or model-edited fixtures using the historical developer launcher. Docker preview activation handles them.
+Start these in separate terminals and keep them open:
 
-## Five-minute recording plan
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\tools\Start-Workbench.ps1
+powershell -NoProfile -ExecutionPolicy Bypass -File .\tools\Start-Workers.ps1
+```
 
-For this machine, use the dedicated current presentation Workbench and exact [Loom recording script](LOOM_RECORDING_SCRIPT.md). `tools/Start-LoomDemo.ps1` serves all three verified completion snapshots at8115 using the latest schema, avoiding legacy-schema and cross-port login issues. The preparation command is `node tools/Prepare-LoomDemo.mjs`; it requires this machine's original private demonstration records, creates a separate viewing schema and never replays inference. Those private records are not included in the public source package.
+Open http://127.0.0.1:8094. Read the locally generated var/config/demo-accounts.json for lowercase usernames and passwords. Asha, Ravi, Maya and Noah are synthetic project members. Previews use8081/8082/8083. Workers poll only while their terminal remains open; restart them after a new release.
 
-1. **0:00–0:40:** Explain the three components: Team Tasks playground, authenticated DevDesk workbench and bounded employee worker. Show the source map and current limitations.
-2. **0:40–1:40:** Open the actual completed backend demo in a separate private browser session. Show read-only API failure evidence, proposed function scope, exact reporter approval, model SQL diff and26 passing candidate checks.
-3. **1:40–2:30:** Show exact candidate acceptance, FINISHED integration,26 post-integration checks and COMPLETED history. Compare the fixed backend Todo preview with the original SQL predicate described in the Phase7 guide.
-4. **2:30–3:40:** Show the completed feature demo: fixed roster4, threshold3, three authenticated synthetic YES votes, reporter scope approval, actual Gemini HTML diff and22 post-integration checks. Click Completed at8083.
-5. **3:40–4:30:** Show the critical scenario matrix: unauthorized/stale decisions, duplicate votes/writes, rejection, recovery and containment. Distinguish deterministic tests from received live model decisions.
-6. **4:30–5:00:** Disclose C++/JS stack, Gemini alias and estimates, Codex assistance, local Git, foreground workers and the future GitHub PR/reporter/admin design.
+## Reproduce the demonstrated workflows
 
-Use the exact completed-demo commands in the Phase7/Phase8 guides on a free port8105; only one such server should use that port at once. Show scope/vote evidence and assertions rather than account/config directories. The feature guide also points to an open-poll test schema for exploring authenticated controls. On a fresh archive these local demonstration schemas are absent: inspect the selected `distribution/evidence` reports, or create a fresh synthetic demo on a separate baseline workspace. Archival live drivers reference this machine's original evidence directories and are not generic fresh-archive setup commands.
+To create a new defect demonstration, choose Restore-PackagedFixtures.ps1 -Baseline in a separate prepared workspace before fixtures exist, then run each generic runner check with --baseline. These checks verify expected deliberate failures. Restoration preserves existing fixtures and does not reset accepted source. Model-edited application execution stays in Docker.
 
-Before recording, confirm that Docker previews are running, hide credentials/account files, use synthetic data and set Chrome to390x844 for mobile evidence. Rehearse once. No video was recorded or uploaded by the agent.
+For the backend bug, report that To do shows tasks of other statuses at http://127.0.0.1:8082/. Compare /api/tasks?status=todo with /api/tasks?status=done. After investigation, prepare and approve the repair scope; inspect the candidate diff/checks; prepare its acceptance review and accept it. Completion requires integrated checks. Refresh the preview after activation.
+
+For the feature, request a Completed filter at http://127.0.0.1:8083/. Prepare and approve its scope, then use three distinct eligible accounts to vote YES in the four-member roster. Return as the reporter to review and accept the candidate. Scope permission and consensus gate implementation; exact candidate acceptance gates integration.
+
+Other archival test drivers reference historical local schemas and evidence directories. Use selected distribution/evidence reports to inspect their assertions; do not blindly replay them against already repaired fixtures. The linked Loom video shows the submitted prototype demonstration.
 
 ## Troubleshooting
 
-| Symptom | Check/action |
+| Symptom | Action |
 | --- | --- |
-| Docker HTTP500/API deadline | Check/restart Docker Desktop locally, then re-run the failed fixed preflight. Do not substitute host execution of edited apps. |
-| Port8094/8081–8083 occupied | Preserve the existing service; choose `Start-Workbench -Port` or stop the specific preview you own. |
-| Model needs information | Open the retained trace: provider errors, denied actions and unsupported conclusions are distinct outcomes. Provide missing report details or explicitly authorize fresh investigation. |
-| Scope/review expired or source changed | Request fresh investigation/scope/review as appropriate; an old hash cannot grant current permission. |
-| Poll still OPEN after time passes | Keep the worker launcher running; recovery reconciles deadlines. Refresh alone is not a timer service. |
-| Latest build missing | Run `Build-Workbench.ps1`; Start-Workbench also builds when latest.json is absent. |
-| New fixture absent | Run the package restore on a new extracted package; preserve existing sources. |
+| Incorrect login after changing workspaces | Use that workspace's new account file and lowercase username; browser autofill may retain old passwords. Five failed attempts trigger a five-minute process-local lockout. |
+| Docker HTTP500/API deadline | Check/restart Docker Desktop, then retry the fixed preflight. Do not substitute host execution of edited application code. |
+| Occupied ports | Preserve existing services; choose Start-Workbench -Port or stop only previews you own. |
+| NEEDS_INFORMATION or REPAIR_BLOCKED | Inspect actual observations, denied actions, provider errors and check evidence. Do not treat these as completion. |
+| Expired/stale scope or review | Obtain fresh investigation/scope/review as required; expired hashes do not authorize a change. |
+| Feature poll remains OPEN | Keep workers running to reconcile deadlines; refreshing the UI is not a timer service. |
+| Missing native release | Run Build-Workbench; Start-Workbench also builds if latest.json is absent. |
 
-Keep whole local evidence/config directories private. Selected packaged reports contain assertions only; they do not transfer live account credentials or runnable database state.
+Keep local account/config/evidence directories private. A fresh external dependency install, new cluster and external image pull were not demonstrated on another machine.

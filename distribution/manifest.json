@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-12T18:26:28.131Z",
+  "created_at": "2026-10-12T19:07:53.845Z",
   "files": [
     {
       "path": ".gitattributes",
@@ -7,15 +7,11 @@
     },
     {
       "path": ".gitignore",
-      "sha256": "2e20d970c81b38714696fe4c9c4b64127ee8b3ae7a8200e0e2a991b774871104"
+      "sha256": "01956b0492eb882d4742ff7e9ba8a05897431e7032afbd751b1fac9f6590e38a"
     },
     {
       "path": "ARCHITECTURE.md",
-      "sha256": "833c8ec832989eaf961e577c9f315f7381d1718b8e75b77a1a14ef404955ccc9"
-    },
-    {
-      "path": "BUILD_STATUS.md",
-      "sha256": "40bdd0fc3a5bc0de8768bf830f2b9406ba88b0b4868e0d948cd930844e235902"
+      "sha256": "4f4931f534c589d17cd2a1d27b2ee30e4b84f99e6a83c0acd03452a5849fbaef"
     },
     {
       "path": "devdesk/db/001_initial.sql",
@@ -190,10 +186,6 @@
       "sha256": "46a65cffd1ea955132d95a8dd921640714a8d6b537d2e4e482d31145ae95b603"
     },
     {
-      "path": "DevDesk_Codex_Build_and_Learning_Instructions.md",
-      "sha256": "eb86dbb0be422cadd2baa1b965d9334def22185501f62793382a74c8c39b1086"
-    },
-    {
       "path": "distribution/evidence/backend-authorization.json",
       "sha256": "03bfda729952739f796529c4bfed08f36edc3ed630c18abebc9a6f6ade93483c"
     },
@@ -279,71 +271,15 @@
     },
     {
       "path": "docs/DISCLOSURES_AND_LIMITS.md",
-      "sha256": "026c0fdaa1ccd2550a98337c0f1fc85c6b715e3b7f2fcd7089a1a43bf41a3eb1"
-    },
-    {
-      "path": "docs/GITHUB_SUBMISSION.md",
-      "sha256": "2f57844455e1acbc85f38b3b231fd8207f19de6b51108b31793115044a80a685"
-    },
-    {
-      "path": "docs/INTERVIEW_AND_DEBUGGING.md",
-      "sha256": "0420ce71941c963b710af61e867fe5e7ae3a488c6ccee1eb991bf386d26082e5"
-    },
-    {
-      "path": "docs/LIVE_LOOM_WORKFLOW.md",
-      "sha256": "8b02234645f6a8c358e23528b50e8826732417f09238d151322f8e488c156c73"
-    },
-    {
-      "path": "docs/LOOM_RECORDING_SCRIPT.md",
-      "sha256": "9ae1e1768d523c40b73e8d7a14c5b5e3cccf85fc89bef34350362b6014b81c28"
-    },
-    {
-      "path": "docs/PHASE1_CODE_GUIDE.md",
-      "sha256": "c437df7ff4544c662241355f3a7eb89643b3069b1c9c2e025183cee3215f3d90"
-    },
-    {
-      "path": "docs/PHASE2_WORKBENCH_GUIDE.md",
-      "sha256": "95a28561a9ce27cb456e6e2e18fb6db8373de1631cfdd739f250c7c4c7439441"
-    },
-    {
-      "path": "docs/PHASE3_INVESTIGATOR_GUIDE.md",
-      "sha256": "10c240969659daaf8a444d15dcd865697a6e8e6a463adb1506cd3123c4191c26"
-    },
-    {
-      "path": "docs/PHASE4_REPAIR_GUIDE.md",
-      "sha256": "c9c501cd6ff3351bc1aff42c68a0c5aa11b832f14a9ec4e01e17d3fc33d33de5"
-    },
-    {
-      "path": "docs/PHASE5_ACCEPTANCE_GUIDE.md",
-      "sha256": "c3780a4d12125e58cf08261fca98b0867f474365d0f54f61e1ed5e65a1cbe3bd"
-    },
-    {
-      "path": "docs/PHASE6_RELIABILITY_GUIDE.md",
-      "sha256": "5d98fdc0ba2652bfcf5ee1db626948305a587eece74c1a55346f63b261e38d32"
-    },
-    {
-      "path": "docs/PHASE7_BACKEND_GUIDE.md",
-      "sha256": "939ddb9a67b15c41ec4085b4517d6ae2e1e0090616a6b412a0fa855afd44f569"
-    },
-    {
-      "path": "docs/PHASE8_FEATURE_GUIDE.md",
-      "sha256": "5752ce2fa52dcb9ec889c152415f14142a82de58d6c676fc7bea69ef8cf10060"
-    },
-    {
-      "path": "docs/PHASE9_PACKAGING_GUIDE.md",
-      "sha256": "6cd5badf8c045453ee5385a74a44c2e0eae912ed6717153b68774ec88c06a6f1"
-    },
-    {
-      "path": "docs/README_HISTORY.md",
-      "sha256": "521a56b96bd882da2590b57bee10896ad95fac6cc61786672a9f83e218fe5862"
+      "sha256": "7dcec5325532df72f14a574ba50e04394d2802aada0725e1dbb677a546b15883"
     },
     {
       "path": "docs/SETUP_AND_DEMO.md",
-      "sha256": "f1e6bbf762e3a5b5a323830f7e4fdd3b52a027a8bf73c8ec1aeb5392be473374"
+      "sha256": "95b3edc957c08ad01a666dce7be68a11705da5b0664cf1456e609e94d1b7b85b"
     },
     {
       "path": "docs/SUBMISSION_OVERVIEW.md",
-      "sha256": "b323466561d6d1cafbdcbb3cd9323095a839947549bb25bc798fddb8c4cd4168"
+      "sha256": "505da4fd35287071379cca6af491ff06525aec835883dbc4193d6b5f78a966c2"
     },
     {
       "path": "docs/verification-index.json",
@@ -351,19 +287,15 @@
     },
     {
       "path": "docs/VERIFICATION_MATRIX.md",
-      "sha256": "4dc38689fa938942c5cf80947bd76a434f0ba5e4e2118c39a373d1b4c36530e2"
-    },
-    {
-      "path": "LEARNING_LOG.md",
-      "sha256": "64141cd83a261e74edae17482101a116332df48391b4d4d1b2c9e13162e48c84"
+      "sha256": "af4a1364e9e884500044ae5a0fefbdfde362025952b7674133f2918dab8ddae8"
     },
     {
       "path": "README.md",
-      "sha256": "50238aca06cbb21d3f7a6b0f8bea21ed1ccb4fe5ab6513edabe5f4e36ce2e3a9"
+      "sha256": "28a914425caf249a367ed355f8f6b5d779ed4785805d43eba287ca84836972c3"
     },
     {
       "path": "SPEC.md",
-      "sha256": "452397b24764849963cedf3df210bd17509cb68688030f424a60e76ed3de1bf3"
+      "sha256": "6b493d93ab179b517b3d4dea502103704b2cb2a17a3e1054ea3a57371462a8b2"
     },
     {
       "path": "tools/Build-Playground.ps1",
@@ -395,7 +327,7 @@
     },
     {
       "path": "tools/Package-DevDesk.mjs",
-      "sha256": "3c002798cbeed43574ff0ba32fe9cb6d4ac6fce493498b9f78e3f71117923393"
+      "sha256": "3b671180f0da5724139a05378eaf2dc537252a7a27895380e38f43aded267901"
     },
     {
       "path": "tools/package-lock.json",
@@ -404,14 +336,6 @@
     {
       "path": "tools/package.json",
       "sha256": "ec01310159ea7a4b454ec9f572bf280f1edd9500a7fa2aceba31ab803a6d0a58"
-    },
-    {
-      "path": "tools/Prepare-LiveLoom.mjs",
-      "sha256": "eb8de979ca134168aad56693baf626d664ebdab3a8a2a60e2b05c73862488c31"
-    },
-    {
-      "path": "tools/Prepare-LoomDemo.mjs",
-      "sha256": "df6ec2ee0bd93114fbdd49ae61b72436c342efb4938402b2406500cb0ead84c2"
     },
     {
       "path": "tools/preview-helper.mjs",
@@ -446,14 +370,6 @@
       "sha256": "b5874cf853bcecff937577ec660daab9009ff949032c3c79aaca7e9cdf135e3f"
     },
     {
-      "path": "tools/Start-LiveLoomWorkbench.ps1",
-      "sha256": "1c47fcfb227da96952582f258668578ad989019382cbc4ba57c1c6c75a765795"
-    },
-    {
-      "path": "tools/Start-LoomDemo.ps1",
-      "sha256": "ef29592dbb675e4d66c6b1837da7497e08b0911a81337d9e3cf167483ef6fe12"
-    },
-    {
       "path": "tools/Start-Playground.ps1",
       "sha256": "681a3b571e3b688e3d60c3d847c6fe1c148fdc57453c7b407d8fec0954892bb3"
     },
@@ -470,20 +386,8 @@
       "sha256": "ce9eac9dbd6e617a0b53a056e1c983492fa473fd9989e2fc9ce143d089c65b54"
     },
     {
-      "path": "tools/Switch-LiveLoomPreviews.mjs",
-      "sha256": "4ca3592d9171059237658935a687bdd106bac4d7b835f97fb30057dedaad7bd9"
-    },
-    {
       "path": "tools/Sync-GitHubSubmission.ps1",
-      "sha256": "0fb7ec59f7dacdd842fb2dd210d00dde6862d8a4a0c8d2c68bc4c26e20362a1d"
-    },
-    {
-      "path": "trusted_checks/live-loom.mjs",
-      "sha256": "8ca339c8b29c196010836d4a0454155256c5fa5fae534283c3a994fe68252f70"
-    },
-    {
-      "path": "trusted_checks/loom-demo.mjs",
-      "sha256": "b347baccaeb6b0cc50a8f69e4c07f2f291837e13e5f324caaa75979a1b6f4d81"
+      "sha256": "afee0efd2797e2d18c3c45778b9a2888078138f80b48ac5e14a26411afd01e0d"
     },
     {
       "path": "trusted_checks/phase1.mjs",

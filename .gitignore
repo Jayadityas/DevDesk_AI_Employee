@@ -5,3 +5,22 @@ node_modules/
 .env
 .env.*
 !.env.example
+
+# Personal preparation and publication bookkeeping stay local.
+/DevDesk_Codex_Build_and_Learning_Instructions.md
+/LEARNING_LOG.md
+/BUILD_STATUS.md
+/docs/INTERVIEW_AND_DEBUGGING.md
+/docs/README_HISTORY.md
+/docs/GITHUB_SUBMISSION.md
+/docs/LOOM_RECORDING_SCRIPT.md
+/docs/LIVE_LOOM_WORKFLOW.md
+/docs/PHASE*_GUIDE.md
+/distribution/submission-sync.json
+/tools/Prepare-LiveLoom.mjs
+/tools/Prepare-LoomDemo.mjs
+/tools/Start-LiveLoomWorkbench.ps1
+/tools/Start-LoomDemo.ps1
+/tools/Switch-LiveLoomPreviews.mjs
+/trusted_checks/live-loom.mjs
+/trusted_checks/loom-demo.mjs
