@@ -1,0 +1,52 @@
+{
+  "id": "frontend-live",
+  "source_report": "var/evidence/phase4-live-2026-10-11T18-18-21.587Z-1932/report.json",
+  "phase": 4,
+  "mode": "live",
+  "checks": [
+    {
+      "name": "real_read_only_investigation",
+      "result": "PASS"
+    },
+    {
+      "name": "reporter_approved_versioned_scope",
+      "result": "PASS"
+    },
+    {
+      "name": "real_model_patch_recorded",
+      "result": "PASS"
+    },
+    {
+      "name": "isolated_candidate_ready",
+      "result": "PASS"
+    },
+    {
+      "name": "baseline_and_candidate_checks_recorded",
+      "result": "PASS"
+    },
+    {
+      "name": "authorized_candidate_screenshot_390",
+      "result": "PASS"
+    },
+    {
+      "name": "authorized_candidate_screenshot_1280",
+      "result": "PASS"
+    },
+    {
+      "name": "candidate_artifact_requires_login",
+      "result": "PASS"
+    },
+    {
+      "name": "shared_source_preserved",
+      "result": "PASS"
+    },
+    {
+      "name": "existing_task_data_preserved",
+      "result": "PASS"
+    },
+    {
+      "name": "not_completed",
+      "result": "PASS"
+    }
+  ]
+}

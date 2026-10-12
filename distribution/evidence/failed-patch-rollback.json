@@ -1,0 +1,28 @@
+{
+  "id": "failed-patch-rollback",
+  "source_report": "var/evidence/phase4-rollback-3fcedb5962d4d7d5983222c5126f4416/report.json",
+  "phase": 4,
+  "mode": "scripted_negative_isolated_check",
+  "checks": [
+    {
+      "name": "checkpoint_before_patch",
+      "result": "PASS"
+    },
+    {
+      "name": "bad_css_fails_independent_checks",
+      "result": "PASS"
+    },
+    {
+      "name": "rollback_recorded_with_attempted_diff",
+      "result": "PASS"
+    },
+    {
+      "name": "original_css_restored",
+      "result": "PASS"
+    },
+    {
+      "name": "failed_attempt_not_committed",
+      "result": "PASS"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "id": "fresh-backend-command",
+  "source_report": "var/evidence/runner-backend-b8165a5fddab0cc956d69d057687fac7/report.json",
+  "phase": 9,
+  "checks": [
+    {
+      "name": "non_root",
+      "result": "PASS"
+    },
+    {
+      "name": "root_read_only",
+      "result": "PASS"
+    },
+    {
+      "name": "checkout_read_only",
+      "result": "PASS"
+    },
+    {
+      "name": "no_host_control_plane",
+      "result": "PASS"
+    },
+    {
+      "name": "no_model_credentials",
+      "result": "PASS"
+    },
+    {
+      "name": "external_network_denied",
+      "result": "PASS"
+    },
+    {
+      "name": "no_new_privileges",
+      "result": "PASS"
+    },
+    {
+      "name": "capabilities_dropped",
+      "result": "PASS"
+    },
+    {
+      "name": "application_cannot_write_evaluator_report",
+      "result": "PASS"
+    },
+    {
+      "name": "application_cannot_read_evaluator_report",
+      "result": "PASS"
+    },
+    {
+      "name": "application_cannot_signal_evaluator",
+      "result": "PASS"
+    },
+    {
+      "name": "application_cannot_change_uid",
+      "result": "PASS"
+    },
+    {
+      "name": "timeout_stops_process_group",
+      "result": "PASS"
+    },
+    {
+      "name": "exact_profile_assertions_and_expected_results",
+      "result": "PASS"
+    }
+  ]
+}

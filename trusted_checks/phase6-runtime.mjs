@@ -1,0 +1,12 @@
+// Actual container prerequisites against the now-integrated frontend source.
+import fs from 'node:fs/promises';import path from 'node:path';import crypto from 'node:crypto';import {spawnSync} from 'node:child_process';
+const root=path.resolve(import.meta.dirname,'..'),load=async f=>JSON.parse((await fs.readFile(f,'utf8')).replace(/^\uFEFF/,''));
+const release=(await load(path.join(root,'devdesk/build/latest.json'))).directory,runner=await load(path.join(root,'var/config/runner.json'));
+const run=crypto.randomBytes(16).toString('hex'),directory=path.join(root,'var/evidence',`phase6-runtime-${run}`);await fs.mkdir(directory,{recursive:true});
+const source=path.join(root,'var/fixtures/frontend'),base=spawnSync('C:/Program Files/Git/cmd/git.exe',['-c',`safe.directory=${source}`,'-C',source,'rev-parse','HEAD'],{encoding:'utf8',windowsHide:true}).stdout.trim();let step=0;const checks=[];
+async function tool(op){const input=path.join(directory,`${op}.json`),output=input+'.out';await fs.writeFile(input,JSON.stringify({root,run_id:run,base_commit:base,op,step:step++}));const p=spawnSync(process.execPath,[path.join(release,'repair-helper.mjs'),input,output],{windowsHide:true,encoding:'utf8',timeout:200000});const r=await load(output);if(p.status!==0||!r.ok)throw new Error(r.error||'Runtime prerequisite failed');return r.result;}
+try{await tool('create');const canary=await tool('canary');checks.push(...canary.report.checks);const timed=await tool('timeout_canary');checks.push({name:'timeout_stops_process_group',result:timed.timeout_stopped&&timed.exit_code!==0?'PASS':'FAIL'});
+ const baseline=await tool('run_checks');checks.push({name:'integrated_baseline_has_all_twenty_PASS',result:baseline.report.checks.length===20&&baseline.report.checks.every(c=>c.result==='PASS')?'PASS':'FAIL'});
+ if(checks.every(c=>c.result==='PASS')){runner.verified=true;runner.verified_at=new Date().toISOString();runner.evidence=path.relative(root,directory);await fs.writeFile(path.join(root,'var/config/runner.json'),JSON.stringify(runner,null,2));}
+}catch(error){checks.push({name:'runtime_prerequisite_suite',result:'FAIL',detail:error.message});}
+const fail=checks.filter(c=>c.result==='FAIL').length;process.exitCode=fail?1:0;await fs.writeFile(path.join(directory,'report.json'),JSON.stringify({phase:6,image:runner.image,checks},null,2));console.log(JSON.stringify({directory:path.relative(root,directory),pass:checks.length-fail,fail}));

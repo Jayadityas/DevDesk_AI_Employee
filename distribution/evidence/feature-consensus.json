@@ -1,0 +1,184 @@
+{
+  "id": "feature-consensus",
+  "source_report": "var/evidence/phase8-consensus-1791814966958/report.json",
+  "phase": 8,
+  "mode": "real_API_scripted_readonly_tools_explicit_consensus_fixtures_zero_inference",
+  "checks": [
+    {
+      "name": "uninvesigated_feature_cannot_open_vote",
+      "result": "PASS"
+    },
+    {
+      "name": "feature_has_real_browser_missing_filter_evidence",
+      "result": "PASS"
+    },
+    {
+      "name": "four_member_snapshot_requires_three",
+      "result": "PASS"
+    },
+    {
+      "name": "feature_scope_is_HTML",
+      "result": "PASS"
+    },
+    {
+      "name": "proposal_replay_no_extra_poll",
+      "result": "PASS"
+    },
+    {
+      "name": "outsider_denied",
+      "result": "PASS"
+    },
+    {
+      "name": "wrong_goal_denied",
+      "result": "PASS"
+    },
+    {
+      "name": "csrf_vote_denied",
+      "result": "PASS"
+    },
+    {
+      "name": "new_member_not_in_snapshot_denied",
+      "result": "PASS"
+    },
+    {
+      "name": "reporter_scope_approval_waits_for_votes",
+      "result": "PASS"
+    },
+    {
+      "name": "first_yes_accepted",
+      "result": "PASS"
+    },
+    {
+      "name": "same_vote_replay_idempotent",
+      "result": "PASS"
+    },
+    {
+      "name": "conflicting_vote_denied",
+      "result": "PASS"
+    },
+    {
+      "name": "two_of_four_is_insufficient",
+      "result": "PASS"
+    },
+    {
+      "name": "three_of_four_ready",
+      "result": "PASS"
+    },
+    {
+      "name": "closed_poll_rejects_new_vote",
+      "result": "PASS"
+    },
+    {
+      "name": "closed_poll_accepts_identical_replay",
+      "result": "PASS"
+    },
+    {
+      "name": "unique_vote_rows",
+      "result": "PASS"
+    },
+    {
+      "name": "refresh_and_server_restart_preserve_poll",
+      "result": "PASS"
+    },
+    {
+      "name": "passed_vote_does_not_skip_reporter_scope_approval",
+      "result": "PASS"
+    },
+    {
+      "name": "reporter_approval_after_consensus_ready",
+      "result": "PASS"
+    },
+    {
+      "name": "other_member_cannot_approve_scope",
+      "result": "PASS"
+    },
+    {
+      "name": "five_member_snapshot_requires_four",
+      "result": "PASS"
+    },
+    {
+      "name": "three_of_five_insufficient_and_roster_not_shrunk",
+      "result": "PASS"
+    },
+    {
+      "name": "removed_member_cannot_vote",
+      "result": "PASS"
+    },
+    {
+      "name": "four_of_five_ready",
+      "result": "PASS"
+    },
+    {
+      "name": "impossible_threshold_invalid",
+      "result": "PASS"
+    },
+    {
+      "name": "invalid_in_history",
+      "result": "PASS"
+    },
+    {
+      "name": "invalid_removed_from_queue",
+      "result": "PASS"
+    },
+    {
+      "name": "requester_notified_of_consensus_rejection",
+      "result": "PASS"
+    },
+    {
+      "name": "late_vote_denied",
+      "result": "PASS"
+    },
+    {
+      "name": "deadline_insufficient_invalid",
+      "result": "PASS"
+    },
+    {
+      "name": "no_response_timeout_invalid",
+      "result": "PASS"
+    },
+    {
+      "name": "recovery_no_duplicate_result_notification",
+      "result": "PASS"
+    },
+    {
+      "name": "changed_scope_invalidates_poll",
+      "result": "PASS"
+    },
+    {
+      "name": "stale_vote_denied",
+      "result": "PASS"
+    },
+    {
+      "name": "runtime_role_cannot_update_votes",
+      "result": "PASS"
+    },
+    {
+      "name": "runtime_role_cannot_update_snapshot",
+      "result": "PASS"
+    },
+    {
+      "name": "runtime_role_cannot_change_poll_goal",
+      "result": "PASS"
+    },
+    {
+      "name": "script_outside_nav_denied",
+      "result": "PASS"
+    },
+    {
+      "name": "event_handler_in_nav_denied",
+      "result": "PASS"
+    },
+    {
+      "name": "remove_existing_filter_denied",
+      "result": "PASS"
+    },
+    {
+      "name": "Chrome_authenticated_vote_recorded",
+      "result": "PASS"
+    },
+    {
+      "name": "Chrome_no_script_errors",
+      "result": "PASS"
+    }
+  ]
+}

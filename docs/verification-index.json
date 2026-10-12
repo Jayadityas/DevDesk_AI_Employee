@@ -1,0 +1,23 @@
+{
+ "reports": [
+  {"id":"frontend-live","path":"var/evidence/phase4-live-2026-10-11T18-18-21.587Z-1932/report.json","expected_pass":11},
+  {"id":"frontend-authorization","path":"var/evidence/phase4-auth-2026-10-11T18-20-40.749Z-10208/report.json","expected_pass":20},
+  {"id":"failed-patch-rollback","path":"var/evidence/phase4-rollback-3fcedb5962d4d7d5983222c5126f4416/report.json","expected_pass":5},
+  {"id":"frontend-acceptance","path":"var/evidence/phase5-2026-10-12T02-44-21.225Z-28452/report.json","expected_pass":23},
+  {"id":"stale-base","path":"var/evidence/phase5-stale-2026-10-12T02-53-43.775Z-3336/report.json","expected_pass":4},
+  {"id":"backend-live","path":"var/evidence/phase7-live-2026-10-12T13-12-50.704Z-13644/report.json","expected_pass":13},
+  {"id":"backend-authorization","path":"var/evidence/phase7-auth-1791808666418/report.json","expected_pass":18},
+  {"id":"feature-live","path":"var/evidence/phase8-live-2026-10-12T14-24-51.126Z-8204/report.json","expected_pass":15},
+  {"id":"feature-consensus","path":"var/evidence/phase8-consensus-1791814966958/report.json","expected_pass":44},
+  {"id":"feature-review","path":"var/evidence/phase8-review-7f6754b804ab58e846960f4033089f18/report.json","expected_pass":14},
+  {"id":"feature-recovery","path":"var/evidence/phase8-feature-recovery-75e825c5a9b4fd0f45ee1e414a03e9a6/report.json","expected_pass":7},
+  {"id":"frontend-runtime","path":"var/evidence/phase6-runtime-4bb6361e08008acba5a57337a9020660/report.json","expected_pass":10},
+  {"id":"backend-runtime","path":"var/evidence/phase7-runtime-8f8da1ac621b215aeec7bdbf84984621/report.json","expected_pass":14},
+  {"id":"feature-runtime","path":"var/evidence/phase8-runtime-e5fbb75eea841b9e86b6a5dd3b8820c6/report.json","expected_pass":10},
+  {"id":"feature-history","path":"var/evidence/phase8-ui-2026-10-12T14-41-56.323Z-21348/report.json","expected_pass":5},
+  {"id":"current-phase9-suite","path":"var/evidence/phase9-1791819003296/report.json","expected_pass":27},
+  {"id":"fresh-frontend-command","path":"var/evidence/runner-frontend-19c006efa2fb8f22ee02b0bb81def65e/report.json","expected_pass":10},
+  {"id":"fresh-backend-command","path":"var/evidence/runner-backend-b8165a5fddab0cc956d69d057687fac7/report.json","expected_pass":14},
+  {"id":"fresh-feature-command","path":"var/evidence/runner-feature-bfd1edc82f86c572b86e5fe6f514e7f6/report.json","expected_pass":10}
+ ]
+}

@@ -1,0 +1,24 @@
+{
+  "id": "stale-base",
+  "source_report": "var/evidence/phase5-stale-2026-10-12T02-53-43.775Z-3336/report.json",
+  "phase": 5,
+  "mode": "scripted_negative_fixture",
+  "checks": [
+    {
+      "name": "stale_base_blocks_integration",
+      "result": "PASS"
+    },
+    {
+      "name": "shared_source_and_history_preserved",
+      "result": "PASS"
+    },
+    {
+      "name": "blocked_candidate_never_completed",
+      "result": "PASS"
+    },
+    {
+      "name": "no_automatic_replay",
+      "result": "PASS"
+    }
+  ]
+}

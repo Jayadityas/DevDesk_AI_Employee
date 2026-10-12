@@ -1,0 +1,14 @@
+{
+  "frontend": {
+    "baseline": "4c0e6bab2605378fbbb33f82b1fd37e7bb458ed0",
+    "accepted": "4945512e8e8d07ca6901a1581bc1363d2cbc7254"
+  },
+  "backend": {
+    "baseline": "a8531153d62904c175f01fdbd55361d79abe2bb2",
+    "accepted": "0ea464b86c4005c99c5e600bdd7da98bd0aa03f5"
+  },
+  "feature": {
+    "baseline": "a23112f3c050f1c948ddc758e667f0c6d23540ee",
+    "accepted": "b8509a4cb64bc19be911d0a5800d0e88aa29cc2c"
+  }
+}

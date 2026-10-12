@@ -1,0 +1,100 @@
+{
+  "id": "frontend-acceptance",
+  "source_report": "var/evidence/phase5-2026-10-12T02-44-21.225Z-28452/report.json",
+  "phase": 5,
+  "mode": "actual_phase4_candidate_continuation_with_fresh_negative_test_schemas",
+  "checks": [
+    {
+      "name": "shared_base_matches_candidate",
+      "result": "PASS"
+    },
+    {
+      "name": "rejection_recorded",
+      "result": "PASS"
+    },
+    {
+      "name": "rejected_candidate_not_integrated",
+      "result": "PASS"
+    },
+    {
+      "name": "rejection_cannot_flip_to_acceptance",
+      "result": "PASS"
+    },
+    {
+      "name": "other_member_review_denied",
+      "result": "PASS"
+    },
+    {
+      "name": "exact_candidate_review_created",
+      "result": "PASS"
+    },
+    {
+      "name": "review_creation_idempotent",
+      "result": "PASS"
+    },
+    {
+      "name": "member_cannot_accept",
+      "result": "PASS"
+    },
+    {
+      "name": "nonmember_cannot_accept",
+      "result": "PASS"
+    },
+    {
+      "name": "wrong_review_hash_denied",
+      "result": "PASS"
+    },
+    {
+      "name": "expired_review_denied",
+      "result": "PASS"
+    },
+    {
+      "name": "changed_candidate_denied",
+      "result": "PASS"
+    },
+    {
+      "name": "unknown_evidence_denied",
+      "result": "PASS"
+    },
+    {
+      "name": "requester_acceptance_recorded",
+      "result": "PASS"
+    },
+    {
+      "name": "duplicate_acceptance_idempotent",
+      "result": "PASS"
+    },
+    {
+      "name": "one_immutable_decision",
+      "result": "PASS"
+    },
+    {
+      "name": "accepted_candidate_integrated_and_verified",
+      "result": "PASS"
+    },
+    {
+      "name": "all_post_integration_assertions_pass",
+      "result": "PASS"
+    },
+    {
+      "name": "completion_in_history",
+      "result": "PASS"
+    },
+    {
+      "name": "completion_absent_from_queue",
+      "result": "PASS"
+    },
+    {
+      "name": "completion_notification_persisted",
+      "result": "PASS"
+    },
+    {
+      "name": "duplicate_worker_no_reintegration",
+      "result": "PASS"
+    },
+    {
+      "name": "duplicate_acceptance_returns_completed",
+      "result": "PASS"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "devdesk-trusted-checks",
+  "private": true,
+  "type": "module",
+  "description": "Local developer browser checks outside the repairable playground",
+  "scripts": {
+    "check:phase1": "node ../trusted_checks/phase1.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.64.0"
+  }
+}

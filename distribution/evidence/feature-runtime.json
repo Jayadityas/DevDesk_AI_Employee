@@ -1,0 +1,47 @@
+{
+  "id": "feature-runtime",
+  "source_report": "var/evidence/phase8-runtime-e5fbb75eea841b9e86b6a5dd3b8820c6/report.json",
+  "phase": 8,
+  "checks": [
+    {
+      "name": "non_root",
+      "result": "PASS"
+    },
+    {
+      "name": "root_read_only",
+      "result": "PASS"
+    },
+    {
+      "name": "checkout_read_only",
+      "result": "PASS"
+    },
+    {
+      "name": "no_host_control_plane",
+      "result": "PASS"
+    },
+    {
+      "name": "no_model_credentials",
+      "result": "PASS"
+    },
+    {
+      "name": "external_network_denied",
+      "result": "PASS"
+    },
+    {
+      "name": "no_new_privileges",
+      "result": "PASS"
+    },
+    {
+      "name": "capabilities_dropped",
+      "result": "PASS"
+    },
+    {
+      "name": "timeout_stops_process_group",
+      "result": "PASS"
+    },
+    {
+      "name": "feature_baseline_has_only_expected_missing_capability",
+      "result": "PASS"
+    }
+  ]
+}

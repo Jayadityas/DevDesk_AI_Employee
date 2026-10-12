@@ -1,0 +1,60 @@
+{
+  "id": "backend-live",
+  "source_report": "var/evidence/phase7-live-2026-10-12T13-12-50.704Z-13644/report.json",
+  "phase": 7,
+  "mode": "real_model_and_containers_synthetic_requester_approval_acceptance",
+  "checks": [
+    {
+      "name": "report_persisted",
+      "result": "PASS"
+    },
+    {
+      "name": "live_model_independently_reproduced_backend",
+      "result": "PASS"
+    },
+    {
+      "name": "backend_scope_has_function_file_and_profile",
+      "result": "PASS"
+    },
+    {
+      "name": "live_model_created_checked_backend_candidate",
+      "result": "PASS"
+    },
+    {
+      "name": "candidate_does_not_change_shared_backend",
+      "result": "PASS"
+    },
+    {
+      "name": "all_twenty_six_candidate_assertions_PASS",
+      "result": "PASS"
+    },
+    {
+      "name": "candidate_diff_is_model_produced",
+      "result": "PASS"
+    },
+    {
+      "name": "synthetic_requester_accepted_exact_candidate",
+      "result": "PASS"
+    },
+    {
+      "name": "accepted_backend_integrated_then_completed",
+      "result": "PASS"
+    },
+    {
+      "name": "all_twenty_six_integrated_assertions_PASS",
+      "result": "PASS"
+    },
+    {
+      "name": "completion_in_history",
+      "result": "PASS"
+    },
+    {
+      "name": "frontend_accepted_source_preserved",
+      "result": "PASS"
+    },
+    {
+      "name": "original_backend_database_preserved",
+      "result": "PASS"
+    }
+  ]
+}

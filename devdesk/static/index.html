@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>DevDesk · Workbench</title><link rel="stylesheet" href="styles.css"><script src="app.js" defer></script></head>
+<body>
+<header><a class="brand" href="/">DevDesk<span>TEAM TASKS / WORKBENCH</span></a><div id="identity"></div><button id="logout" hidden>Sign out</button></header>
+<main>
+<p id="message" role="status" aria-live="polite"></p>
+<section id="login-panel" class="login panel" hidden>
+ <p class="eyebrow">EMPLOYEE ACCESS</p><h1>Keep the team moving.</h1><p>Report a problem, share an idea, and follow its progress.</p>
+ <form id="login-form"><label>Username<input name="username" required autocomplete="username" maxlength="32"></label><label>Password<input name="password" type="password" required autocomplete="current-password" maxlength="128"></label><button class="primary">Sign in</button></form>
+ <p class="muted">Local demo uses synthetic employee accounts.</p>
+</section>
+<div id="workspace" hidden>
+ <div class="intro"><div><p class="eyebrow">TEAM TASKS</p><h1>Your maintenance desk.</h1><p class="muted">Reports stay visible from submission through resolution.</p></div><button id="refresh">Refresh records</button></div>
+ <p class="notice">Repairs require scope approval. Review the exact candidate before accepting integration; completion requires passing checks after integration.</p>
+ <div class="layout"><aside>
+  <nav aria-label="Workbench views"><button data-view="queue" class="selected">Active queue <span id="queue-count">0</span></button><button data-view="history">History</button><button data-view="notifications">Notifications <span id="unread-count">0</span></button><button data-view="report">New report <span>＋</span></button></nav>
+  <p class="muted sidebar-note">Priority is provisional until independent evidence supports it.</p>
+ </aside><div class="content">
+ <section id="list-panel"><div class="section-title"><h2 id="view-title">Active queue</h2><span id="list-caption" class="muted"></span></div><div id="records"></div></section>
+ <section id="report-panel" class="panel" hidden>
+  <p class="eyebrow">NEW REQUEST</p><h2>What needs attention?</h2>
+  <form id="report-form">
+   <div class="form-grid"><label>Project<select name="project_id" id="project-select"></select></label><label>Request type<select name="kind"><option value="bug">Bug report</option><option value="feature">Feature request</option></select></label></div>
+   <label>Title<input name="title" required maxlength="120" placeholder="A short description of the issue"></label>
+   <label>Description<textarea name="description" required maxlength="4000" rows="3" placeholder="Expected behavior and what happened instead"></textarea></label>
+   <label>Steps to reproduce<textarea name="reproduction" maxlength="2000" rows="3" placeholder="For a bug: list the actions that reproduce it"></textarea></label>
+   <label>Playground URL<input name="page_url" type="url" required value="http://127.0.0.1:8080/"></label>
+   <div class="form-grid"><label>Viewport width<input name="viewport_width" type="number" min="200" max="4096" value="390" required></label><label>Viewport height<input name="viewport_height" type="number" min="200" max="4096" value="844" required></label></div>
+   <label>Reported impact<select name="reported_impact"><option value="cosmetic">Cosmetic or layout issue</option><option value="local_functional">Local functionality, workaround available</option><option value="core_workflow">Core workflow affected</option><option value="data_loss">Suspected data loss</option></select></label>
+   <label>Screenshot (optional)<input name="screenshot" type="file" accept="image/png,image/jpeg"></label><p class="muted">PNG or JPEG, up to 5 MiB and 4096 pixels per side. Original evidence is retained.</p>
+   <button class="primary" id="submit-report">Submit report</button>
+  </form>
+ </section>
+ <section id="detail" class="panel" hidden></section>
+ </div></div>
+</div></main><footer>DevDesk · Local synthetic demo</footer>
+</body></html>

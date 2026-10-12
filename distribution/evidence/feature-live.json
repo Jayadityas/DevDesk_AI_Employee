@@ -1,0 +1,68 @@
+{
+  "id": "feature-live",
+  "source_report": "var/evidence/phase8-live-2026-10-12T14-24-51.126Z-8204/report.json",
+  "phase": 8,
+  "mode": "real_model_and_containers_synthetic_roster_votes_requester_approval_acceptance",
+  "checks": [
+    {
+      "name": "report_persisted",
+      "result": "PASS"
+    },
+    {
+      "name": "live_model_independently_observed_missing_feature",
+      "result": "PASS"
+    },
+    {
+      "name": "feature_scope_has_HTML_and_profile",
+      "result": "PASS"
+    },
+    {
+      "name": "four_member_poll_requires_three",
+      "result": "PASS"
+    },
+    {
+      "name": "synthetic_three_member_consensus_ready",
+      "result": "PASS"
+    },
+    {
+      "name": "live_model_created_checked_feature_candidate",
+      "result": "PASS"
+    },
+    {
+      "name": "candidate_does_not_change_shared_feature",
+      "result": "PASS"
+    },
+    {
+      "name": "all_twenty_two_candidate_assertions_PASS",
+      "result": "PASS"
+    },
+    {
+      "name": "candidate_diff_is_model_produced",
+      "result": "PASS"
+    },
+    {
+      "name": "synthetic_requester_accepted_exact_candidate",
+      "result": "PASS"
+    },
+    {
+      "name": "accepted_feature_integrated_then_completed",
+      "result": "PASS"
+    },
+    {
+      "name": "all_twenty_two_integrated_assertions_PASS",
+      "result": "PASS"
+    },
+    {
+      "name": "completion_in_history",
+      "result": "PASS"
+    },
+    {
+      "name": "frontend_accepted_source_preserved",
+      "result": "PASS"
+    },
+    {
+      "name": "original_feature_database_preserved",
+      "result": "PASS"
+    }
+  ]
+}

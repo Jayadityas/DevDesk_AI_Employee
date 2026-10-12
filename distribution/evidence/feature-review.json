@@ -1,0 +1,64 @@
+{
+  "id": "feature-review",
+  "source_report": "var/evidence/phase8-review-7f6754b804ab58e846960f4033089f18/report.json",
+  "phase": 8,
+  "mode": "real_current_API_real_candidate_receipt_fresh_schema_no_source_edits",
+  "checks": [
+    {
+      "name": "concurrent_identical_votes_are_one_effect",
+      "result": "PASS"
+    },
+    {
+      "name": "concurrent_threshold_votes_close_once",
+      "result": "PASS"
+    },
+    {
+      "name": "other_employee_cannot_prepare_review",
+      "result": "PASS"
+    },
+    {
+      "name": "canonical_feature_digest_prepares_review",
+      "result": "PASS"
+    },
+    {
+      "name": "review_replay_idempotent",
+      "result": "PASS"
+    },
+    {
+      "name": "other_employee_cannot_decide",
+      "result": "PASS"
+    },
+    {
+      "name": "wrong_review_binding_denied",
+      "result": "PASS"
+    },
+    {
+      "name": "unknown_feature_check_denies_decision",
+      "result": "PASS"
+    },
+    {
+      "name": "stale_consensus_denies_candidate_decision",
+      "result": "PASS"
+    },
+    {
+      "name": "forged_pass_with_too_few_votes_denies_decision",
+      "result": "PASS"
+    },
+    {
+      "name": "requester_can_reject_exact_feature_candidate",
+      "result": "PASS"
+    },
+    {
+      "name": "rejection_replay_idempotent",
+      "result": "PASS"
+    },
+    {
+      "name": "rejection_cannot_flip_to_acceptance",
+      "result": "PASS"
+    },
+    {
+      "name": "rejected_feature_candidate_not_integrated",
+      "result": "PASS"
+    }
+  ]
+}

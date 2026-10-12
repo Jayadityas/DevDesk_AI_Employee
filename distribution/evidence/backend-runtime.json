@@ -1,0 +1,169 @@
+{
+  "id": "backend-runtime",
+  "source_report": "var/evidence/phase7-runtime-8f8da1ac621b215aeec7bdbf84984621/report.json",
+  "phase": 7,
+  "checks": [
+    {
+      "name": "non_root",
+      "result": "PASS"
+    },
+    {
+      "name": "root_read_only",
+      "result": "PASS"
+    },
+    {
+      "name": "checkout_read_only",
+      "result": "PASS"
+    },
+    {
+      "name": "no_host_control_plane",
+      "result": "PASS"
+    },
+    {
+      "name": "no_model_credentials",
+      "result": "PASS"
+    },
+    {
+      "name": "external_network_denied",
+      "result": "PASS"
+    },
+    {
+      "name": "no_new_privileges",
+      "result": "PASS"
+    },
+    {
+      "name": "capabilities_dropped",
+      "result": "PASS"
+    },
+    {
+      "name": "application_cannot_write_evaluator_report",
+      "result": "PASS"
+    },
+    {
+      "name": "application_cannot_read_evaluator_report",
+      "result": "PASS"
+    },
+    {
+      "name": "application_cannot_signal_evaluator",
+      "result": "PASS"
+    },
+    {
+      "name": "application_cannot_change_uid",
+      "result": "PASS"
+    },
+    {
+      "name": "backend_timeout_stops_process",
+      "result": "PASS"
+    },
+    {
+      "name": "independent_backend_baseline_matches_recorded_source_state",
+      "result": "PASS",
+      "baseline_checks": [
+        {
+          "name": "build",
+          "result": "PASS"
+        },
+        {
+          "name": "app_source_identity",
+          "result": "PASS"
+        },
+        {
+          "name": "seeded_tasks",
+          "result": "PASS"
+        },
+        {
+          "name": "evaluator_user_separated",
+          "result": "PASS"
+        },
+        {
+          "name": "seed_matches_database",
+          "result": "PASS"
+        },
+        {
+          "name": "filter_matches_database",
+          "result": "PASS"
+        },
+        {
+          "name": "database_preserved_by_reads",
+          "result": "PASS"
+        },
+        {
+          "name": "filter_todo",
+          "result": "PASS"
+        },
+        {
+          "name": "filter_in_progress",
+          "result": "PASS"
+        },
+        {
+          "name": "filter_done",
+          "result": "PASS"
+        },
+        {
+          "name": "action_buttons_separate_390",
+          "result": "PASS"
+        },
+        {
+          "name": "no_horizontal_overflow_390",
+          "result": "PASS"
+        },
+        {
+          "name": "no_script_errors_390",
+          "result": "PASS"
+        },
+        {
+          "name": "browser_create_390",
+          "result": "PASS"
+        },
+        {
+          "name": "browser_advance_390",
+          "result": "PASS"
+        },
+        {
+          "name": "browser_remove_390",
+          "result": "PASS"
+        },
+        {
+          "name": "action_buttons_separate_1280",
+          "result": "PASS"
+        },
+        {
+          "name": "no_horizontal_overflow_1280",
+          "result": "PASS"
+        },
+        {
+          "name": "no_script_errors_1280",
+          "result": "PASS"
+        },
+        {
+          "name": "browser_create_1280",
+          "result": "PASS"
+        },
+        {
+          "name": "browser_advance_1280",
+          "result": "PASS"
+        },
+        {
+          "name": "browser_remove_1280",
+          "result": "PASS"
+        },
+        {
+          "name": "create_task",
+          "result": "PASS"
+        },
+        {
+          "name": "advance_task",
+          "result": "PASS"
+        },
+        {
+          "name": "filter_after_mutations",
+          "result": "PASS"
+        },
+        {
+          "name": "invalid_filter_rejected",
+          "result": "PASS"
+        }
+      ]
+    }
+  ]
+}

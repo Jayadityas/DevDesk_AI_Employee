@@ -1,0 +1,87 @@
+{
+  "id": "frontend-authorization",
+  "source_report": "var/evidence/phase4-auth-2026-10-11T18-20-40.749Z-10208/report.json",
+  "phase": 4,
+  "checks": [
+    {
+      "name": "repair_C++_policy_checks",
+      "result": "PASS"
+    },
+    {
+      "name": "login_asha",
+      "result": "PASS"
+    },
+    {
+      "name": "login_ravi",
+      "result": "PASS"
+    },
+    {
+      "name": "login_outsider",
+      "result": "PASS"
+    },
+    {
+      "name": "submission",
+      "result": "PASS"
+    },
+    {
+      "name": "uninvestigated_scope_denied",
+      "result": "PASS"
+    },
+    {
+      "name": "other_member_proposal_denied",
+      "result": "PASS"
+    },
+    {
+      "name": "scope_prepared",
+      "result": "PASS"
+    },
+    {
+      "name": "versioned_scope_with_CSS_and_expiry",
+      "result": "PASS"
+    },
+    {
+      "name": "scope_creation_idempotent",
+      "result": "PASS"
+    },
+    {
+      "name": "other_member_approval_denied",
+      "result": "PASS"
+    },
+    {
+      "name": "outsider_approval_denied",
+      "result": "PASS"
+    },
+    {
+      "name": "changed_scope_hash_denied",
+      "result": "PASS"
+    },
+    {
+      "name": "expired_scope_denied",
+      "result": "PASS"
+    },
+    {
+      "name": "reporter_approval_ready",
+      "result": "PASS"
+    },
+    {
+      "name": "duplicate_approval_idempotent",
+      "result": "PASS"
+    },
+    {
+      "name": "one_immutable_approval",
+      "result": "PASS"
+    },
+    {
+      "name": "existing_frontend_data_preserved",
+      "result": "PASS"
+    },
+    {
+      "name": "shared_fixture_clean",
+      "result": "PASS"
+    },
+    {
+      "name": "never_completed",
+      "result": "PASS"
+    }
+  ]
+}

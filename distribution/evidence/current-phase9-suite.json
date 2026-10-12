@@ -1,0 +1,116 @@
+{
+  "id": "current-phase9-suite",
+  "source_report": "var/evidence/phase9-1791819003296/report.json",
+  "phase": 9,
+  "mode": "current_regressions_bounded_startup_archival_evidence_validation",
+  "checks": [
+    {
+      "name": "recorded_frontend-live",
+      "result": "PASS"
+    },
+    {
+      "name": "recorded_frontend-authorization",
+      "result": "PASS"
+    },
+    {
+      "name": "recorded_failed-patch-rollback",
+      "result": "PASS"
+    },
+    {
+      "name": "recorded_frontend-acceptance",
+      "result": "PASS"
+    },
+    {
+      "name": "recorded_stale-base",
+      "result": "PASS"
+    },
+    {
+      "name": "recorded_backend-live",
+      "result": "PASS"
+    },
+    {
+      "name": "recorded_backend-authorization",
+      "result": "PASS"
+    },
+    {
+      "name": "recorded_feature-live",
+      "result": "PASS"
+    },
+    {
+      "name": "recorded_feature-consensus",
+      "result": "PASS"
+    },
+    {
+      "name": "recorded_feature-review",
+      "result": "PASS"
+    },
+    {
+      "name": "recorded_feature-recovery",
+      "result": "PASS"
+    },
+    {
+      "name": "recorded_frontend-runtime",
+      "result": "PASS"
+    },
+    {
+      "name": "recorded_backend-runtime",
+      "result": "PASS"
+    },
+    {
+      "name": "recorded_feature-runtime",
+      "result": "PASS"
+    },
+    {
+      "name": "recorded_feature-history",
+      "result": "PASS"
+    },
+    {
+      "name": "--worker-selftest",
+      "result": "PASS"
+    },
+    {
+      "name": "--repair-selftest",
+      "result": "PASS"
+    },
+    {
+      "name": "current_workbench_95_PASS",
+      "result": "PASS"
+    },
+    {
+      "name": "current_reliability_27_PASS",
+      "result": "PASS"
+    },
+    {
+      "name": "documented_workbench_launcher_serves_login",
+      "result": "PASS"
+    },
+    {
+      "name": "bounded_launcher_exits_cleanly",
+      "result": "PASS"
+    },
+    {
+      "name": "frontend_source_preserved",
+      "result": "PASS"
+    },
+    {
+      "name": "frontend_original_data_preserved",
+      "result": "PASS"
+    },
+    {
+      "name": "backend_source_preserved",
+      "result": "PASS"
+    },
+    {
+      "name": "backend_original_data_preserved",
+      "result": "PASS"
+    },
+    {
+      "name": "feature_source_preserved",
+      "result": "PASS"
+    },
+    {
+      "name": "feature_original_data_preserved",
+      "result": "PASS"
+    }
+  ]
+}

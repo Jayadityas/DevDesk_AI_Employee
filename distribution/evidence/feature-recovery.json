@@ -1,0 +1,36 @@
+{
+  "id": "feature-recovery",
+  "source_report": "var/evidence/phase8-feature-recovery-75e825c5a9b4fd0f45ee1e414a03e9a6/report.json",
+  "phase": 8,
+  "mode": "real_verified_journal_with_explicit_database_crash_fixtures",
+  "checks": [
+    {
+      "name": "verified_journal_recovers_completion",
+      "result": "PASS"
+    },
+    {
+      "name": "reconciliation_does_not_replay_Git",
+      "result": "PASS"
+    },
+    {
+      "name": "completion_recovery_is_idempotent",
+      "result": "PASS"
+    },
+    {
+      "name": "stale_consensus_blocks_completion_recovery",
+      "result": "PASS"
+    },
+    {
+      "name": "stale_consensus_preserves_source",
+      "result": "PASS"
+    },
+    {
+      "name": "missing_journal_blocks_instead_of_false_completion",
+      "result": "PASS"
+    },
+    {
+      "name": "uncertain_integration_preserves_shared_HEAD",
+      "result": "PASS"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "frontend-runtime",
+  "source_report": "var/evidence/phase6-runtime-4bb6361e08008acba5a57337a9020660/report.json",
+  "phase": 6,
+  "checks": [
+    {
+      "name": "non_root",
+      "result": "PASS"
+    },
+    {
+      "name": "root_read_only",
+      "result": "PASS"
+    },
+    {
+      "name": "checkout_read_only",
+      "result": "PASS"
+    },
+    {
+      "name": "no_host_control_plane",
+      "result": "PASS"
+    },
+    {
+      "name": "no_model_credentials",
+      "result": "PASS"
+    },
+    {
+      "name": "external_network_denied",
+      "result": "PASS"
+    },
+    {
+      "name": "no_new_privileges",
+      "result": "PASS"
+    },
+    {
+      "name": "capabilities_dropped",
+      "result": "PASS"
+    },
+    {
+      "name": "timeout_stops_process_group",
+      "result": "PASS"
+    },
+    {
+      "name": "integrated_baseline_has_all_twenty_PASS",
+      "result": "PASS"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "fresh-feature-command",
+  "source_report": "var/evidence/runner-feature-bfd1edc82f86c572b86e5fe6f514e7f6/report.json",
+  "phase": 9,
+  "checks": [
+    {
+      "name": "non_root",
+      "result": "PASS"
+    },
+    {
+      "name": "root_read_only",
+      "result": "PASS"
+    },
+    {
+      "name": "checkout_read_only",
+      "result": "PASS"
+    },
+    {
+      "name": "no_host_control_plane",
+      "result": "PASS"
+    },
+    {
+      "name": "no_model_credentials",
+      "result": "PASS"
+    },
+    {
+      "name": "external_network_denied",
+      "result": "PASS"
+    },
+    {
+      "name": "no_new_privileges",
+      "result": "PASS"
+    },
+    {
+      "name": "capabilities_dropped",
+      "result": "PASS"
+    },
+    {
+      "name": "timeout_stops_process_group",
+      "result": "PASS"
+    },
+    {
+      "name": "exact_profile_assertions_and_expected_results",
+      "result": "PASS"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "id": "backend-authorization",
+  "source_report": "var/evidence/phase7-auth-1791808666418/report.json",
+  "phase": 7,
+  "mode": "real_API_and_tools_scripted_decisions_no_model_calls",
+  "checks": [
+    {
+      "name": "backend_submission",
+      "result": "PASS"
+    },
+    {
+      "name": "unconfirmed_scope_denied",
+      "result": "PASS"
+    },
+    {
+      "name": "scripted_claim_has_real_failing_API_evidence",
+      "result": "PASS"
+    },
+    {
+      "name": "other_member_scope_denied",
+      "result": "PASS"
+    },
+    {
+      "name": "backend_scope_prepared",
+      "result": "PASS"
+    },
+    {
+      "name": "scope_binds_cpp_profile_and_criteria",
+      "result": "PASS"
+    },
+    {
+      "name": "proposal_replay_idempotent",
+      "result": "PASS"
+    },
+    {
+      "name": "member_cannot_approve",
+      "result": "PASS"
+    },
+    {
+      "name": "outsider_cannot_approve",
+      "result": "PASS"
+    },
+    {
+      "name": "changed_hash_denied",
+      "result": "PASS"
+    },
+    {
+      "name": "expired_backend_scope_denied",
+      "result": "PASS"
+    },
+    {
+      "name": "changed_file_scope_denied",
+      "result": "PASS"
+    },
+    {
+      "name": "reporter_approval_accepted",
+      "result": "PASS"
+    },
+    {
+      "name": "approval_replay_idempotent",
+      "result": "PASS"
+    },
+    {
+      "name": "cross_profile_model_action_DENIED",
+      "result": "PASS"
+    },
+    {
+      "name": "developer_boundary_fixture_created",
+      "result": "PASS"
+    },
+    {
+      "name": "out_of_function_patch_denied_before_write",
+      "result": "PASS"
+    },
+    {
+      "name": "shared_backend_preserved",
+      "result": "PASS"
+    }
+  ]
+}

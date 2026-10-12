@@ -1,0 +1,13 @@
+// Real feature-container prerequisites against the unchanged feature fixture.
+import fs from 'node:fs/promises';import path from 'node:path';import crypto from 'node:crypto';import {spawnSync} from 'node:child_process';
+const root=path.resolve(import.meta.dirname,'..'),load=async f=>JSON.parse((await fs.readFile(f,'utf8')).replace(/^\uFEFF/,''));
+const release=(await load(path.join(root,'devdesk/build/latest.json'))).directory,run=crypto.randomBytes(16).toString('hex'),directory=path.join(root,'var/evidence',`phase8-runtime-${run}`);await fs.mkdir(directory,{recursive:true});
+const source=path.join(root,'var/fixtures/feature'),base=spawnSync('git',['-c',`safe.directory=${source}`,'-C',source,'rev-parse','HEAD'],{encoding:'utf8',windowsHide:true}).stdout.trim();let step=0;const checks=[];
+async function tool(op){const input=path.join(directory,`${op}.json`),output=input+'.out';await fs.writeFile(input,JSON.stringify({root,run_id:run,profile:'feature',base_commit:base,op,step:step++}));const p=spawnSync(process.execPath,[path.join(release,'repair-helper.mjs'),input,output],{windowsHide:true,encoding:'utf8',timeout:200000});const r=await load(output);if(p.status!==0||!r.ok)throw Error(r.error||'Feature prerequisite failed');return r.result;}
+try{await tool('create');checks.push(...(await tool('canary')).report.checks);const timed=await tool('timeout_canary');checks.push({name:'timeout_stops_process_group',result:timed.timeout_stopped&&timed.exit_code!==0?'PASS':'FAIL'});
+ const baseline=await tool('run_checks'),names=baseline.report.checks.filter(c=>c.result!=='PASS').map(c=>c.name).sort();
+ const repaired=(await fs.readFile(path.join(source,'static/index.html'),'utf8')).includes('data-filter="done"');
+ checks.push({name:'feature_baseline_has_only_expected_missing_capability',result:baseline.report.checks.length===22&&JSON.stringify(names)===JSON.stringify(repaired?[]:['completed_filter_1280','completed_filter_390'])?'PASS':'FAIL'});
+ if(checks.every(c=>c.result==='PASS')){const runner=await load(path.join(root,'var/config/runner.json'));runner.feature_verified=true;runner.feature_evidence=path.relative(root,directory);await fs.writeFile(path.join(root,'var/config/runner.json'),JSON.stringify(runner,null,2));}
+}catch(error){checks.push({name:'feature_runtime_suite',result:'FAIL',detail:error.message});}
+const fail=checks.filter(c=>c.result==='FAIL').length;await fs.writeFile(path.join(directory,'report.json'),JSON.stringify({phase:8,checks},null,2));console.log(JSON.stringify({directory:path.relative(root,directory),pass:checks.length-fail,fail}));process.exitCode=fail?1:0;
