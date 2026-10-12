@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-12T15:58:58.234Z",
+  "created_at": "2026-10-12T16:18:04.597Z",
   "files": [
     {
       "path": ".gitattributes",
@@ -279,7 +279,7 @@
     },
     {
       "path": "docs/DISCLOSURES_AND_LIMITS.md",
-      "sha256": "b2441d54682ea68656f3131693a4596021229cf6f998fa856442533edb41d744"
+      "sha256": "026c0fdaa1ccd2550a98337c0f1fc85c6b715e3b7f2fcd7089a1a43bf41a3eb1"
     },
     {
       "path": "docs/GITHUB_SUBMISSION.md",
@@ -288,6 +288,10 @@
     {
       "path": "docs/INTERVIEW_AND_DEBUGGING.md",
       "sha256": "0420ce71941c963b710af61e867fe5e7ae3a488c6ccee1eb991bf386d26082e5"
+    },
+    {
+      "path": "docs/LOOM_RECORDING_SCRIPT.md",
+      "sha256": "9ae1e1768d523c40b73e8d7a14c5b5e3cccf85fc89bef34350362b6014b81c28"
     },
     {
       "path": "docs/PHASE1_CODE_GUIDE.md",
@@ -331,7 +335,11 @@
     },
     {
       "path": "docs/SETUP_AND_DEMO.md",
-      "sha256": "52c1aeabd58181be9fb8cc8d4499d6ed57961943d2bb1ba6e49f9a0e05863169"
+      "sha256": "f1e6bbf762e3a5b5a323830f7e4fdd3b52a027a8bf73c8ec1aeb5392be473374"
+    },
+    {
+      "path": "docs/SUBMISSION_OVERVIEW.md",
+      "sha256": "bad259c246702fddcac8a4dfe27c734cde2f124df25a0305a92efa878b3a96a6"
     },
     {
       "path": "docs/verification-index.json",
@@ -347,7 +355,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "6c07a7a223644f4a4172e3ca94bd0eb22769df6d562f07c650d7d6c7abf23c64"
+      "sha256": "c9638057468e310e75af1eb8605ec167dc234a6448d722610b4802b935fbb9b4"
     },
     {
       "path": "SPEC.md",
@@ -394,6 +402,10 @@
       "sha256": "ec01310159ea7a4b454ec9f572bf280f1edd9500a7fa2aceba31ab803a6d0a58"
     },
     {
+      "path": "tools/Prepare-LoomDemo.mjs",
+      "sha256": "df6ec2ee0bd93114fbdd49ae61b72436c342efb4938402b2406500cb0ead84c2"
+    },
+    {
       "path": "tools/preview-helper.mjs",
       "sha256": "bbc3c279a3c2a161edbd1057b1bfe8b8ed695845f1166f14b46878e90a5d3bce"
     },
@@ -426,6 +438,10 @@
       "sha256": "b5874cf853bcecff937577ec660daab9009ff949032c3c79aaca7e9cdf135e3f"
     },
     {
+      "path": "tools/Start-LoomDemo.ps1",
+      "sha256": "ef29592dbb675e4d66c6b1837da7497e08b0911a81337d9e3cf167483ef6fe12"
+    },
+    {
       "path": "tools/Start-Playground.ps1",
       "sha256": "681a3b571e3b688e3d60c3d847c6fe1c148fdc57453c7b407d8fec0954892bb3"
     },
@@ -444,6 +460,10 @@
     {
       "path": "tools/Sync-GitHubSubmission.ps1",
       "sha256": "0fb7ec59f7dacdd842fb2dd210d00dde6862d8a4a0c8d2c68bc4c26e20362a1d"
+    },
+    {
+      "path": "trusted_checks/loom-demo.mjs",
+      "sha256": "b347baccaeb6b0cc50a8f69e4c07f2f291837e13e5f324caaa75979a1b6f4d81"
     },
     {
       "path": "trusted_checks/phase1.mjs",

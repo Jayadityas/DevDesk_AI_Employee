@@ -11,7 +11,7 @@ Workbench is http://127.0.0.1:8094. Previews are frontend8081, backend8082 and f
 
 ## Source package on a prepared Windows machine
 
-The source archive contains control-plane source, fixed tooling, docs/licenses, selected assertion reports and a Git bundle for the clean playground plus the three accepted fixture histories. It deliberately has no keys, local accounts, databases, uploads, node_modules, native releases or Docker image. There is no public GitHub source URL yet; the local source archive is the current deliverable. Publishing it is a separate action.
+The source archive contains control-plane source, fixed tooling, docs/licenses, selected assertion reports and a Git bundle for the clean playground plus the three accepted fixture histories. It deliberately has no keys, local accounts, databases, uploads, node_modules, native releases or Docker image. The source is also published at https://github.com/Jayadityas/DevDesk_AI_Employee. The accessible Loom video link will be added once recording is finished.
 
 Prerequisites observed in this implementation: Windows PowerShell, Git, Node24, Chrome, MSYS2 UCRT64 g++16.2 with SQLite headers/library, PostgreSQL17 binaries/headers/library at `C:\Program Files\PostgreSQL\17`, and a working Linux Docker engine. Compiler path is `C:\msys64\ucrt64\bin\g++.exe`. Exact observed libraries: cpp-httplib0.60.1, nlohmann/json3.12.0, Playwright1.64.0 (lockfile). Adjust installation paths in trusted build/setup scripts if needed. Linux/macOS control-plane portability is untested.
 
@@ -41,6 +41,8 @@ Default restore selects the already accepted source, so healthy assertions are20
 To reproduce original defects on a separate prepared workspace, choose `Restore-PackagedFixtures.ps1 -Baseline` before any fixtures exist. It restores original defect commits from the same bundle, without inserting repairs. Run the three `verify-runner.mjs` commands above with `--baseline`; they validate the expected deliberate failures before workers execute edits. Restoration always preserves existing fixtures; it never resets accepted shared source. Do not host-build/run accepted or model-edited fixtures using the historical developer launcher. Docker preview activation handles them.
 
 ## Five-minute recording plan
+
+For this machine, use the dedicated current presentation Workbench and exact [Loom recording script](LOOM_RECORDING_SCRIPT.md). `tools/Start-LoomDemo.ps1` serves all three verified completion snapshots at8115 using the latest schema, avoiding legacy-schema and cross-port login issues. The preparation command is `node tools/Prepare-LoomDemo.mjs`; it requires this machine's original private demonstration records, creates a separate viewing schema and never replays inference. Those private records are not included in the public source package.
 
 1. **0:00–0:40:** Explain the three components: Team Tasks playground, authenticated DevDesk workbench and bounded employee worker. Show the source map and current limitations.
 2. **0:40–1:40:** Open the actual completed backend demo in a separate private browser session. Show read-only API failure evidence, proposed function scope, exact reporter approval, model SQL diff and26 passing candidate checks.
