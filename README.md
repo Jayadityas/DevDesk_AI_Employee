@@ -68,7 +68,7 @@ Phase9 validates historical evidence and runs current regression/startup checks 
 
 ## Learning and submission material
 
-The [submission overview](docs/SUBMISSION_OVERVIEW.md) maps architecture, design decisions, assumptions, limitations, next steps and model/component disclosures to the requested submission items. [Loom recording instructions and narration](docs/LOOM_RECORDING_SCRIPT.md) cover the real verified demo. The video link will be added here after the recording is shared.
+The [submission overview](docs/SUBMISSION_OVERVIEW.md) maps architecture, design decisions, assumptions, limitations, next steps and model/component disclosures to the requested submission items. Follow the [live Loom workflow](docs/LIVE_LOOM_WORKFLOW.md) to record a new bug submission, AI repair, both approvals, and a new feature with three consensus votes. The [completed-history presentation](docs/LOOM_RECORDING_SCRIPT.md) is an alternative walkthrough of existing evidence. The video link will be added here after the recording is shared.
 
 - [Setup, troubleshooting and five-minute recording plan](docs/SETUP_AND_DEMO.md)
 - [Critical scenario matrix](docs/VERIFICATION_MATRIX.md)

@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-12T16:18:04.597Z",
+  "created_at": "2026-10-12T17:25:39.962Z",
   "files": [
     {
       "path": ".gitattributes",
@@ -290,6 +290,10 @@
       "sha256": "0420ce71941c963b710af61e867fe5e7ae3a488c6ccee1eb991bf386d26082e5"
     },
     {
+      "path": "docs/LIVE_LOOM_WORKFLOW.md",
+      "sha256": "8b02234645f6a8c358e23528b50e8826732417f09238d151322f8e488c156c73"
+    },
+    {
       "path": "docs/LOOM_RECORDING_SCRIPT.md",
       "sha256": "9ae1e1768d523c40b73e8d7a14c5b5e3cccf85fc89bef34350362b6014b81c28"
     },
@@ -355,7 +359,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "c9638057468e310e75af1eb8605ec167dc234a6448d722610b4802b935fbb9b4"
+      "sha256": "13b6d7958fcc2dd0d84959495faebbb773a731c78bda945a4cb07f243b06eb55"
     },
     {
       "path": "SPEC.md",
@@ -402,6 +406,10 @@
       "sha256": "ec01310159ea7a4b454ec9f572bf280f1edd9500a7fa2aceba31ab803a6d0a58"
     },
     {
+      "path": "tools/Prepare-LiveLoom.mjs",
+      "sha256": "eb8de979ca134168aad56693baf626d664ebdab3a8a2a60e2b05c73862488c31"
+    },
+    {
       "path": "tools/Prepare-LoomDemo.mjs",
       "sha256": "df6ec2ee0bd93114fbdd49ae61b72436c342efb4938402b2406500cb0ead84c2"
     },
@@ -438,6 +446,10 @@
       "sha256": "b5874cf853bcecff937577ec660daab9009ff949032c3c79aaca7e9cdf135e3f"
     },
     {
+      "path": "tools/Start-LiveLoomWorkbench.ps1",
+      "sha256": "1c47fcfb227da96952582f258668578ad989019382cbc4ba57c1c6c75a765795"
+    },
+    {
       "path": "tools/Start-LoomDemo.ps1",
       "sha256": "ef29592dbb675e4d66c6b1837da7497e08b0911a81337d9e3cf167483ef6fe12"
     },
@@ -455,11 +467,19 @@
     },
     {
       "path": "tools/Start-Workers.ps1",
-      "sha256": "b0154aed400f8a12201c514704180f2d7271e7ac7bbb64133e96abba7e0f919f"
+      "sha256": "ce9eac9dbd6e617a0b53a056e1c983492fa473fd9989e2fc9ce143d089c65b54"
+    },
+    {
+      "path": "tools/Switch-LiveLoomPreviews.mjs",
+      "sha256": "4ca3592d9171059237658935a687bdd106bac4d7b835f97fb30057dedaad7bd9"
     },
     {
       "path": "tools/Sync-GitHubSubmission.ps1",
       "sha256": "0fb7ec59f7dacdd842fb2dd210d00dde6862d8a4a0c8d2c68bc4c26e20362a1d"
+    },
+    {
+      "path": "trusted_checks/live-loom.mjs",
+      "sha256": "8ca339c8b29c196010836d4a0454155256c5fa5fae534283c3a994fe68252f70"
     },
     {
       "path": "trusted_checks/loom-demo.mjs",

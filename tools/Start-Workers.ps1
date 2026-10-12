@@ -30,7 +30,8 @@ do{
    while(-not $child.HasExited -and [DateTime]::UtcNow -lt $deadline){Start-Sleep -Milliseconds 250}
    if(-not $child.HasExited){$child.Kill();$child.WaitForExit()}
    $output=$stdout.GetAwaiter().GetResult().Trim();$errorText=$stderr.GetAwaiter().GetResult().Trim()
-   if($output -and $output -notmatch '^(No eligible|No queued|Project worker busy)'){Write-Host $output}
+   $routineRecovery=$mode -eq '--recover' -and $child.ExitCode -eq 0 -and $output -eq 'Recovery reconciled; uncertain operations were not replayed.'
+   if($output -and -not $routineRecovery -and $output -notmatch '^(No eligible|No queued|Project worker busy)'){Write-Host $output}
    if($errorText){Write-Warning $errorText}
   }finally{if(-not $child.HasExited){$child.Kill();$child.WaitForExit()};$child.Dispose()}
  }
